@@ -17,8 +17,8 @@
     }
     .envelope {
       position: relative;
-      width: 300px; /* Tamaño aumentado */
-      height: 200px; /* Tamaño aumentado */
+      width: 300px; /* Tamaño del sobre */
+      height: 200px;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -32,7 +32,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100px; /* Ajuste del tamaño */
+      height: 100px; /* Altura de la tapa */
       background: #f9c6c9;
       border-radius: 10px 10px 0 0;
     }
@@ -43,16 +43,17 @@
     }
     .envelope.opened::after {
       transform: rotateX(0);
+      z-index: -1; /* Mueve la tapa detrás del mensaje */
     }
     .message {
       position: absolute;
-      top: 50%;
+      top: 30px; /* Baja un poco el mensaje */
       left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%; /* Ajuste para que sea proporcional al sobre */
-      height: 70%; /* Mayor tamaño */
+      transform: translate(-50%, 0);
+      width: 90%; /* Ajusta al tamaño del sobre */
+      height: 70%; /* Espacio suficiente para el texto */
       background: #fff;
-      padding: 20px; /* Más espacio interno */
+      padding: 20px; /* Espaciado interno */
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       opacity: 0;
