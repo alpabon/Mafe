@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -16,8 +17,8 @@
     }
     .envelope {
       position: relative;
-      width: 200px;
-      height: 120px;
+      width: 300px; /* Tamaño aumentado */
+      height: 200px; /* Tamaño aumentado */
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -31,7 +32,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 60px;
+      height: 100px; /* Ajuste del tamaño */
       background: #f9c6c9;
       border-radius: 10px 10px 0 0;
     }
@@ -48,10 +49,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80%;
-      height: 60%;
+      width: 90%; /* Ajuste para que sea proporcional al sobre */
+      height: 70%; /* Mayor tamaño */
       background: #fff;
-      padding: 10px;
+      padding: 20px; /* Más espacio interno */
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       opacity: 0;
@@ -60,7 +61,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-size: 1.2em;
+      font-size: 1.5em; /* Texto más grande */
       color: #555;
     }
     .envelope.opened .message {
@@ -79,7 +80,7 @@
 </head>
 <body>
   <div class="envelope" onclick="openEnvelope()">
-    <div class="message">¡Te amo! ❤️</div>
+    <div class="message">¡Te amo mucho! ❤️</div>
   </div>
 
   <script>
