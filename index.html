@@ -1,113 +1,68 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorpresa</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffdde1, #c7ecee);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* Sobre */
-    .envelope {
-      position: relative;
-      width: 370px;
-      height: 270px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transform-origin: bottom;
-    }
-    .envelope::before, .envelope::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 130px;
-      background: #f9c6c9;
-      border-radius: 10px 10px 0 0;
-    }
-    .envelope::after {
-      transform: rotateX(180deg);
-      transform-origin: top;
-      transition: transform 0.5s;
-    }
-    .envelope.opened::after {
-      transform: rotateX(0);
-      z-index: -1;
-    }
-
-    /* Mensaje */
-    .message {
-      position: absolute;
-      top: 40px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 90%;
-      height: 80%;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      transition: opacity 0.5s 0.5s;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-size: 1.2em;
-      color: #555;
-      overflow-y: auto;
-    }
-    .envelope.opened .message {
-      opacity: 1;
-    }
-
-    /* Líneas decorativas */
-    .decorative-lines {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 10px;
-    }
-    .decorative-lines div {
-      width: 30%;
-      height: 4px;
-      background: #f9c6c9;
-      border-radius: 2px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación San Valentín</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: #e1e1e1;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .envelope:active {
+            transform: scale(0.95);
+        }
+        .flap {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 0;
+            background-color: #8b6d4b;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            z-index: 2;
+            transition: transform 0.5s ease;
+        }
+        .envelope.open .flap {
+            transform: rotateX(180deg);
+            transform-origin: top;
+        }
+        .image {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .envelope.open .image {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <!-- Sobre -->
-  <div class="envelope" onclick="openEnvelope()">
-    <div class="message">
-      Hola linda, a dos semanas de vernos queria decirte que no hay una persona en este mundo que me haga tan feliz como tu me haces  <br>
-      Gracias por todo lo que haces por mi lo valoroo mucho y por eso me tomo el tiempop de hacer todo lo que hago por ti ❤️
-      <div class="decorative-lines">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+    <div class="envelope" onclick="openEnvelope()">
+        <div class="flap"></div>
+        <img src="URL_DE_TU_IMAGEN" alt="Invitación San Valentín" class="image">
     </div>
-  </div>
 
-  <script>
-    function openEnvelope() {
-      const envelope = document.querySelector('.envelope');
-      envelope.classList.add('opened');
-    }
-  </script>
+    <script>
+        function openEnvelope() {
+            document.querySelector('.envelope').classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
