@@ -52,12 +52,72 @@
         .envelope.open .image {
             display: block;
         }
+        /* Estilos para los enlaces */
+        .links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            padding: 10px;
+        }
+        .link {
+            position: absolute;
+            font-size: 14px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .link:hover {
+            transform: scale(1.1);
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .link1 { top: 10%; left: 5%; }
+        .link2 { top: 20%; left: 30%; }
+        .link3 { top: 40%; left: 10%; }
+        .link4 { top: 50%; left: 40%; }
+        .link5 { top: 70%; left: 15%; }
+        .link6 { top: 80%; left: 50%; }
+        .link7 { top: 60%; left: 70%; }
+        .link8 { top: 15%; right: 10%; }
+        .link9 { top: 30%; right: 25%; }
+        .link10 { top: 55%; right: 5%; }
+        .link11 { top: 45%; right: 35%; }
+        .link12 { top: 75%; right: 10%; }
+        .link13 { top: 10%; right: 40%; }
+        .link14 { top: 25%; right: 50%; }
+
     </style>
 </head>
 <body>
     <div class="envelope" onclick="openEnvelope()">
         <div class="flap"></div>
         <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/86349124_10156747245072051_7667217974339567616_n.png?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WUIMxV5MCCAQ7kNvgG9KeT2&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=A3Yg9MfmQvL0fiZufh2c7Kf&oh=00_AYCabSRYbud2843R0YsGeF4TZT8EbDfFz-8EE2TGSnBMXQ&oe=67C208D7" alt="Invitación San Valentín" class="image">
+        <!-- Enlaces a las canciones -->
+        <div class="links">
+            <a href="https://www.youtube.com/watch?v=OAiD5kQYBjo" target="_blank" class="link link1">Devorame otra vez - Lalo Rodríguez</a>
+            <a href="https://www.youtube.com/watch?v=jdRI1HnEgsY" target="_blank" class="link link2">Si pudiera - Manuel Medrano</a>
+            <a href="https://www.youtube.com/watch?v=H7rT2wOacMQ" target="_blank" class="link link3">Una y otra vez - Manuel Medrano</a>
+            <a href="https://www.youtube.com/watch?v=HkzpUtTxw5k" target="_blank" class="link link4">La mujer que bota fuego - Manuel Medrano</a>
+            <a href="https://www.youtube.com/watch?v=2b_YkDOV_Xo" target="_blank" class="link link5">Afuera del planeta - Manuel Medrano</a>
+            <a href="https://www.youtube.com/watch?v=FSrmwvL67ns" target="_blank" class="link link6">Qué linda - Darviin</a>
+            <a href="https://www.youtube.com/watch?v=w0yKMp3bGqM" target="_blank" class="link link7">Quiereme mientras se pueda - Manuel Turizo</a>
+            <a href="https://www.youtube.com/watch?v=eN6hxQgG_44" target="_blank" class="link link8">Como yo - Juan Luis Guerra</a>
+            <a href="https://www.youtube.com/watch?v=Kp3fa9r5V5k" target="_blank" class="link link9">Amor completo - Mon Laferte</a>
+            <a href="https://www.youtube.com/watch?v=EH3u0V9-dW4" target="_blank" class="link link10">Bonita - Juanes</a>
+            <a href="https://www.youtube.com/watch?v=EKtJj2GvfPo" target="_blank" class="link link11">I'm yours - Jason Mraz</a>
+            <a href="https://www.youtube.com/watch?v=xg2_gv2VLeE" target="_blank" class="link link12">Si tú no estás - Franco de Vita</a>
+            <a href="https://www.youtube.com/watch?v=3nJkmSoq4C4" target="_blank" class="link link13">All of me - John Legend</a>
+            <a href="https://www.youtube.com/watch?v=5G6F4fTeFMg" target="_blank" class="link link14">Tengo ganas - Andrés Cepeda</a>
+            <a href="https://www.youtube.com/watch?v=DPjsRQfgzTY" target="_blank" class="link link15">Desnúdate mujer - Frankie Ruiz</a>
+        </div>
     </div>
 
     <script>
