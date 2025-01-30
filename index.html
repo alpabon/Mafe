@@ -14,10 +14,15 @@
             margin: 0;
             background-color: #f9e5e6; /* Fondo pastel */
             position: relative;
+            flex-direction: column;
+        }
+        .envelope-container {
+            position: relative;
+            z-index: 2; /* Para que la carta esté encima */
         }
         .envelope {
             position: relative;
-            width: 600px; /* Tamaño del sobre aumentado */
+            width: 600px; /* Tamaño más grande */
             height: 450px;
             background-color: #f9c8d1; /* Carta rosada */
             border-radius: 15px;
@@ -53,19 +58,19 @@
         .envelope.open .image {
             display: block;
         }
-        /* Estilos para los enlaces en el fondo */
+        /* Enlaces distribuidos fuera de la carta */
         .links {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             align-content: space-around;
             padding: 20px;
-            pointer-events: none;
+            z-index: 1; /* Detrás de la carta */
         }
         .link {
             position: absolute;
@@ -76,37 +81,38 @@
             border-radius: 5px;
             text-decoration: none;
             transition: transform 0.3s ease;
-            pointer-events: auto;
         }
         .link:hover {
             transform: scale(1.1);
             background-color: rgba(0, 0, 0, 0.8);
         }
-        /* Ajuste de posiciones para los enlaces en el fondo */
-        .link1 { top: 10%; left: 5%; }
-        .link2 { top: 20%; left: 30%; }
-        .link3 { top: 40%; left: 10%; }
-        .link4 { top: 50%; left: 40%; }
-        .link5 { top: 70%; left: 15%; }
-        .link6 { top: 80%; left: 50%; }
-        .link7 { top: 60%; left: 70%; }
-        .link8 { top: 15%; right: 10%; }
-        .link9 { top: 30%; right: 25%; }
-        .link10 { top: 55%; right: 5%; }
-        .link11 { top: 45%; right: 35%; }
-        .link12 { top: 75%; right: 10%; }
-        .link13 { top: 10%; right: 40%; }
-        .link14 { top: 25%; right: 50%; }
-        .link15 { top: 85%; left: 20%; }
+        /* Posiciones corregidas de los enlaces */
+        .link1 { top: 5%; left: 10%; }
+        .link2 { top: 10%; left: 40%; }
+        .link3 { top: 20%; left: 70%; }
+        .link4 { top: 30%; left: 15%; }
+        .link5 { top: 40%; left: 50%; }
+        .link6 { top: 50%; left: 80%; }
+        .link7 { top: 60%; left: 20%; }
+        .link8 { top: 70%; left: 60%; }
+        .link9 { top: 80%; left: 30%; }
+        .link10 { top: 85%; left: 75%; }
+        .link11 { top: 90%; left: 5%; }
+        .link12 { top: 95%; left: 50%; }
+        .link13 { top: 10%; right: 5%; }
+        .link14 { top: 25%; right: 25%; }
+        .link15 { top: 35%; right: 50%; }
     </style>
 </head>
 <body>
-    <div class="envelope" onclick="openEnvelope()">
-        <div class="flap"></div>
-        <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/86349124_10156747245072051_7667217974339567616_n.png?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WUIMxV5MCCAQ7kNvgG9KeT2&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=A3Yg9MfmQvL0fiZufh2c7Kf&oh=00_AYCabSRYbud2843R0YsGeF4TZT8EbDfFz-8EE2TGSnBMXQ&oe=67C208D7" alt="Invitación San Valentín" class="image">
+    <div class="envelope-container">
+        <div class="envelope" onclick="openEnvelope()">
+            <div class="flap"></div>
+            <img src="URL_DE_TU_IMAGEN" alt="Invitación San Valentín" class="image">
+        </div>
     </div>
 
-    <!-- Enlaces a las canciones (fuera de la carta, en el fondo) -->
+    <!-- Enlaces distribuidos en el fondo -->
     <div class="links">
         <a href="https://www.youtube.com/watch?v=OAiD5kQYBjo" target="_blank" class="link link1">Devorame otra vez - Lalo Rodríguez</a>
         <a href="https://www.youtube.com/watch?v=jdRI1HnEgsY" target="_blank" class="link link2">Si pudiera - Manuel Medrano</a>
